@@ -46,9 +46,9 @@
                 passwordError.textContent = data.errors.password;
             }
             if (data.user) {
-                //  location.assign('/');
+                location.assign('/');
             }
-        } catch (err) {
+        } catch (error) {
             console.log(err);
         }
     });

@@ -4,6 +4,9 @@ const mongoose = require('mongoose');
 const blogRoutes = require('./routes/blogRoutes');
 const authRoutes = require('./routes/authRoutes');
 const cookieParser = require('cookie-parser');
+const {
+  requireAuth
+} = require('./middleware/authMiddleware');
 // express app
 const app = express();
 app.use(express.json());
@@ -39,10 +42,28 @@ app.get('/', (req, res) => {
   res.redirect('/blogs');
 });
 
+app.get('/blogs/create', requireAuth, (req, res) => {
+  res.render('create', {
+    title: 'New Blog Entry'
+  })
+});
+
 
 app.get('/about', (req, res) => {
   res.render('about', {
     title: 'About'
+  });
+});
+
+app.get('/signup', (req, res) => {
+  res.render('signup', {
+    title: 'Signup'
+  });
+});
+
+app.get('/login', (req, res) => {
+  res.render('login', {
+    title: 'Login'
   });
 });
 

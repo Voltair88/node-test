@@ -19,9 +19,13 @@ const server = http.createServer((req, res) => {
       path += "about.ejs";
       res.statusCode = 200;
       break;
-    case "/about-me.ejs":
-      res.statusCode = 301;
-      res.setHeader('Location', '/about');
+    case "/login":
+      path += "login.ejs";
+      res.statusCode = 200;
+      break;
+    case "/signup":
+      path += "signup";
+      res.statusCode = 200;
       break;
     default:
       path += "404.ejs";

@@ -152,6 +152,18 @@
       padding: 10px 16px;
       letter-spacing: 2px;
     }
+    .button{
+      margin-top: 30px;
+      border-radius: 36px;
+      background: #FEE996;
+      border:0;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 0.8em;
+      display: block;
+      padding: 10px 16px;
+      letter-spacing: 2px;
+    }
     .error{
       color: #ff0099;
       margin: 10px 2px;

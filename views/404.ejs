@@ -1,24 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head.ejs') %> 
+<%- include('./partials/head.ejs') %>
+
+
+<%- include('./partials/nav.ejs') %>
 
 <body>
-    <nav>
-        <div class="site-title">
-        <a href="/">        <h1>hello friends</h1>
-        </a>
-        <p>hello everyone</p>
+    <div class="not-found-content">
+        <p>404 page not found</p>
     </div>
-    <ul>
-        <li><a href="/">blogs</li></a>
-        <li><a href="/about">About</li></a>
-        <li><a href="/blogs/create">New blog</li></a>
-    </ul>
-    </nav>
-<div class="not-found-content">
-    <p>page not found</p>
-</div>
-<%- include('./partials/footer.ejs') %> 
+    <%- include('./partials/footer.ejs') %>
 
 </body>
+
 </html>
